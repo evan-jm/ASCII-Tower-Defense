@@ -3,24 +3,25 @@
 #include <vector>
 
 Board::Board(int width, int height) {
-  std::vector<std::vector<int>> arr;
-
   for(int i = 0; i < height; i++) {
     std::vector<int> row;
     for(int j = 0; j < width; j++) {
       row.push_back(0);
     }
-    arr.push_back(row);
+    this->grid.push_back(row);
   }
 }
 
-std::vector<int>* Board::getGrid() {
-
+std::vector<std::vector<int>> Board::getGrid() {
+  return this->grid;
 }
 
 void Board::display() {
-  int width = this->getGrid()->size();
-  for(int i = 0; i < width; i++) {
-    std::cout << this->;
+  for(int i = 0; i < this->grid.size(); i++) {
+    std::vector<int> row = this->grid[i];
+    for(int j = 0; j < row.size(); j++) {
+      std::cout << row[j];
+    }
+    std::cout << "\n";
   }
 }

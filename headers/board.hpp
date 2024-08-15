@@ -10,7 +10,7 @@ class Board {
     std::vector<std::vector<int>> grid;
   public:
     Board(int width, int height);
-    std::vector<int>* getGrid();
+    std::vector<std::vector<int>> getGrid();
     void display();
 };
 
